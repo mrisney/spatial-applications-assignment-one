@@ -1,0 +1,5 @@
+"distance","mean_inside","mean_outside","difference","n_inside","n_outside","p_value","significant"
+"100m",14.68,13.14,1.54,41,1144,"0.18",FALSE
+"250m",15.55,12.54,3.01,256,929,"8.06e-10",TRUE
+"500m",14.54,10.75,3.79,764,421,"< 2e-16",TRUE
+"1000m",13.41,7.57,5.84,1141,44,"2.67e-10",TRUE
