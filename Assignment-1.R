@@ -188,6 +188,35 @@ qqnorm(incivility_vals, main = "Q-Q Plot of Incivility Values",
 qqline(incivility_vals, col = "red", lwd = 2)
 dev.off()
 
+
+# 2×2 exploratory panel
+png(file.path(results_dir, "eda_panel.png"), width=8, height=8, units="in", res=300)
+par(mfrow=c(2,2), mar=c(4,4,2,1))
+
+# 1) Incivility vs X
+plot(coords[,1], incivility_vals,
+     xlab="Easting (m)", ylab="Incivility",
+     main="Incivility vs X")
+
+# 2) Incivility vs Y
+plot(coords[,2], incivility_vals,
+     xlab="Northing (m)", ylab="Incivility",
+     main="Incivility vs Y")
+
+# 3) Histogram
+hist(incivility_vals, breaks=20,
+     xlab="Incivility", main="Histogram of Incivility",
+     col="lightblue", border="darkblue")
+abline(v=mean(incivility_vals), col="red", lwd=2)
+
+# 4) Density with Q–Q overlay (or just density)
+plot(density(incivility_vals), 
+     xlab="Incivility", main="Density of Incivility")
+rug(incivility_vals)
+
+dev.off()
+par(mfrow=c(1,1))  # reset
+
 # ----------------------------
 # 6. FIT A SEMIVARIOGRAM MODEL
 # ----------------------------
