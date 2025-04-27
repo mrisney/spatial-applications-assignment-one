@@ -29,7 +29,7 @@ Run the analysis
 r
 Copy
 Edit
-source("Assignment1_analysis.R")
+source("Assignment-1.R")
 Reads, reprojects, and cleans data
 
 Builds a geoR object & explores distribution/normality (H1)
@@ -50,9 +50,9 @@ Summary tables (.csv) document buffer analysis & correlation results.
 
 Figures ↔ Hypotheses
 
-Fig	File	Description	Hypothesis
+Fig	Filename	Description	Hypothesis
 1	data_points_map.png	Raw incivility + 500 m school buffers	—
-2	incivility_histogram.png	Incivility distribution & mean line	H1 (normal)
+2	incivility_histogram.png	Incivility distribution & mean line	H1 (normality)
 3	incivility_qqplot.png	Q–Q plot normality check	H1
 4	semivariogram_plot.png	Experimental semivariogram	H1
 5	fitted_semivariogram.png	Fitted spherical variogram	H1
@@ -61,7 +61,7 @@ Fig	File	Description	Hypothesis
 8	kriged_incivility_map.png	Kriged incivility surface	H2
 9	kriging_std_error_map.png	Kriging standard-error map	H2
 10	school_buffer_analysis_map.png	500 m buffer mean inside vs. outside	H3
-11	distance_to_school_plot.png	Incivility vs. distance scatter & fit	H4
+11	distance_to_school_plot.png	Incivility vs. distance scatter & fit line	H4
 Notes & Extensions
 All spatial data → NAD83 / UTM Zone 18N (meters) projection.
 
